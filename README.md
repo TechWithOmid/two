@@ -1,0 +1,11 @@
+# TODO
+- [ ] create post
+- [ ] delete post
+- [ ] draft post
+- [ ] comment system
+    - [ ] send notification to user when replay to the comment
+- [ ] contact us 
+    -[ ] send notification to me
+- [ ] make it search engine friendly
+- [ ] add promoted post
+- [ ] add category, tag
