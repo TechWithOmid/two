@@ -1,5 +1,7 @@
-### use django and drf for backend
-### use react.js or vue.js for frontend
+# Tech
+use django and drf for backend
+use react.js or vue.js for frontend
+database roadmap is here
 
 ## TODO
 - [ ] create post
