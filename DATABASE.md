@@ -12,9 +12,10 @@
         - [ ] name
 
     - [ ] writer
+        link this as profile when user click on it goto about page
         - [ ] name
         - [ ] picture
-        - [ ] about
+        - [ ] bio => short introduction 
         - [ ] social media link
 
 
