@@ -24,5 +24,8 @@
     - [ ] email
     - [ ] comment
 
+### Note
 create blog app for posts 
 create comment app for post comments 
+
+I need to create another model for social media and add the CharFields then I can use it in my user model
