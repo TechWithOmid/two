@@ -14,7 +14,7 @@
     - [ ] writer
         link this as profile when user click on it goto about page
         - [ ] name
-        - [ ] picture
+        - [ ] picture = picture that show in profile section of home page
         - [ ] bio => short introduction 
         - [ ] social media link
 

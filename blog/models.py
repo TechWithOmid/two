@@ -16,7 +16,7 @@ class Writer(models.Model):
     """
     define who write the post(post owner)
     """
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(upload_to='avatar/')
     bio = models.TextField()
     # user be able to add Instagram, Twiiter, Yotube, Telegram link
