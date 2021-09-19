@@ -15,8 +15,9 @@ blog/migrations/
 # Credentials
 .env
 
-# Static files
+# Static&Media files
 files/
+media/
 
 # Django 
 *.log
