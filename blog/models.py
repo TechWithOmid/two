@@ -19,9 +19,13 @@ class Writer(models.Model):
     define who write the post(post owner)
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    username = models.CharField(max_length=128)
     avatar = models.ImageField(upload_to='avatar/')
     bio = models.TextField()
     # user be able to add Instagram, Twiiter, Yotube, Telegram link
+
+    def __str__(self):
+        return self.username
 
 
 class Post(models.Model):
@@ -31,8 +35,9 @@ class Post(models.Model):
     title = models.CharField(max_length=256)
     thumbnail = models.ImageField(
         upload_to='uploads/%Y/%m/%d/', null=True, blank=True)
+    description = models.TextField(max_length=280)
     content = RichTextField(blank=True, null=True)
-    gategory = models.ManyToManyField(Category)
+    category = models.ManyToManyField(Category)
     date = models.DateTimeField(default=timezone.now)
     owner = models.ForeignKey(Writer, on_delete=models.CASCADE)
 
