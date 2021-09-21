@@ -33,6 +33,7 @@ class Post(models.Model):
     blog articles 
     """
     title = models.CharField(max_length=256)
+    slug = models.SlugField(blank=True, null=True)
     thumbnail = models.ImageField(
         upload_to='uploads/%Y/%m/%d/', null=True, blank=True)
     description = models.TextField(max_length=280)

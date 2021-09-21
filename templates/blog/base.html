@@ -22,7 +22,7 @@
 
 <body>
     <header class="header text-center">	    
-	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="index.html">TechWithOmid</a></h1>
+	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="{% url 'blog:home' %}">TechWithOmid</a></h1>
         
 	    <nav class="navbar navbar-expand-lg navbar-dark" >
            
@@ -32,9 +32,9 @@
 
 			<div id="navigation" class="collapse navbar-collapse flex-column" >
 				<div class="profile-section pt-3 pt-lg-0">
-				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.jpg" alt="image" >			
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="{{writer_info.avatar.url}}" alt="image" >			
 					
-					<div class="bio mb-3">سلام, من امید هستم. برنامه نویس و محصل رشته‌ی الکترونیک. اگه بیشتر میخواید بدونید میتونید <a href="about.html">به اینجا </a>یه نگاهی بندازید.</div><!--//bio-->
+					<div class="bio mb-3">{{writer_info.bio}}</div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
 			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
 			            
@@ -49,7 +49,7 @@
 				
 				<ul class="navbar-nav flex-column text-start">
 					<li class="nav-item">
-					    <a class="nav-link active" href="index.html"><i class="fas fa-home fa-fw me-2"></i>بلاگ <span class="sr-only">(current)</span></a>
+					    <a class="nav-link active" href="{% url 'blog:home' %}"><i class="fas fa-home fa-fw me-2"></i>بلاگ <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw me-2"></i>تماس با من</a>

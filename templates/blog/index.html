@@ -12,10 +12,10 @@
 					        <img class="img-fluid post-thumb " src="{{post.thumbnail.url}}" alt="image">
 					    </div>
 					    <div class="col">
-						    <h3 class="title mb-1"><a class="text-link" href="blog-post.html">{{post.title}}</a></h3>
+						    <h3 class="title mb-1"><a class="text-link" href="{{post.id}}">{{post.title}}</a></h3>
 						    <div class="meta mb-1"><span class="date">Published 2 days ago</span></div>
 						    <div class="intro">{{post.content|truncatewords:10|safe}}</div>
-						    <a class="text-link" href="blog-post.html">بیشتر &larr;</a>
+						    <a class="text-link" href="{{post.id}}">بیشتر &larr;</a>
 					    </div><!--//col-->
 				    </div><!--//row-->
 			    </div><!--//item-->
