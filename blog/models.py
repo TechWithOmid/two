@@ -33,11 +33,11 @@ class Post(models.Model):
     blog articles 
     """
     title = models.CharField(max_length=256)
-    slug = models.SlugField(blank=True, null=True)
+    slug = models.SlugField()
     thumbnail = models.ImageField(
         upload_to='uploads/%Y/%m/%d/', null=True, blank=True)
     description = models.TextField(max_length=280)
-    content = RichTextField(blank=True, null=True)
+    content = RichTextField()
     category = models.ManyToManyField(Category)
     date = models.DateTimeField(default=timezone.now)
     owner = models.ForeignKey(Writer, on_delete=models.CASCADE)

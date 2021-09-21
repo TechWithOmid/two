@@ -13,10 +13,12 @@ def home_page_view(request):
     return render(request, 'blog/index.html', context)
 
 
-def detail_page_view(request, id):
+def detail_page_view(request, slug):
     """Detail Page"""
-    post = Post.objects.get(pk=id)
+    post = Post.objects.get(slug=slug)
+    writer_info = Writer.objects.get(pk=1)
     context = {
         'post': post,
+        'writer_info': writer_info,
     }
     return render(request, 'blog/blog-post.html', context)

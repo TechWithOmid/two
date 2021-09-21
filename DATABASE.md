@@ -1,10 +1,10 @@
 # databases
 1. Blog
     - [ ] post
-        - [ ] title, post, image
-        - [ ] date
-        - [ ] ctegory
-        - [ ] writer
+        - [x] title, post, image
+        - [x] date
+        - [x] ctegory
+        - [x] writer
         - [ ] comment, reply, comment like
         - [ ] like btn for post
 
