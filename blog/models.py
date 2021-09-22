@@ -32,6 +32,10 @@ class Post(models.Model):
     """
     blog articles 
     """
+    STATUS = {
+        ('d', 'Draft'),
+        ('p', 'Plublished'),
+    }
     title = models.CharField(max_length=256)
     slug = models.SlugField()
     thumbnail = models.ImageField(
@@ -41,6 +45,7 @@ class Post(models.Model):
     category = models.ManyToManyField(Category)
     date = models.DateTimeField(default=timezone.now)
     owner = models.ForeignKey(Writer, on_delete=models.CASCADE)
+    status = models.CharField(max_length=1, choices=STATUS, default='d')
 
     def __str__(self):
         return self.title
