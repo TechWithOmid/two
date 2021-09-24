@@ -1,0 +1,18 @@
+{% extends './base.html' %}
+
+{% block content %}
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">درباره‌ی من </h2>
+			    </header>
+			    
+			    <div class="blog-post-body">{{writer_info.about_me|safe}}</div>
+				    
+		    </div><!--//container-->
+	    </article>
+	    
+
+    
+{% endblock content %}

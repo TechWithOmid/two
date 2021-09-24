@@ -21,7 +21,8 @@ class Writer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     username = models.CharField(max_length=128)
     avatar = models.ImageField(upload_to='avatar/')
-    bio = models.TextField()
+    bio = models.TextField() # show in menu bar
+    about_me = RichTextField(null=True, blank=True) # show in about me page
     # user be able to add Instagram, Twiiter, Yotube, Telegram link
 
     def __str__(self):

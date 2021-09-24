@@ -18,4 +18,5 @@ database roadmap is here
 - [ ] make it search engine friendly
 - [ ] add abilitty that show when post is published
 - [ ] add category, tag
+- [ ] add verbose name for models 
 - [ ] customize admin panel 

@@ -1,3 +1,4 @@
+from django.db import models
 from django.shortcuts import render
 from django.core.paginator import Paginator
 from .models import Post, Writer
@@ -27,3 +28,13 @@ def detail_page_view(request, slug):
         'writer_info': writer_info,
     }
     return render(request, 'blog/blog-post.html', context)
+
+
+def about_me_view(request):
+    """about me page"""
+    writer = Writer.objects.get(pk=1)
+    context = {
+        'writer_info': writer,
+    }
+
+    return render(request, 'blog/about-me.html', context)
