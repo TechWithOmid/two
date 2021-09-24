@@ -1,13 +1,18 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+from django.core.paginator import Paginator
 from .models import Post, Writer
 
 def home_page_view(request):
     """Home Page"""
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('-date')
     writer_info = Writer.objects.get(pk=1)
+    paginator = Paginator(posts, 5) 
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        'posts': posts,
+        'page_obj': page_obj,
         'writer_info': writer_info,
     }
     return render(request, 'blog/index.html', context)
