@@ -19,6 +19,7 @@ class Writer(models.Model):
     define who write the post(post owner)
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    email = models.EmailField()
     username = models.CharField(max_length=128)
     avatar = models.ImageField(upload_to='avatar/')
     bio = models.TextField() # show in menu bar

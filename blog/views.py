@@ -38,3 +38,13 @@ def about_me_view(request):
     }
 
     return render(request, 'blog/about-me.html', context)
+
+
+def contact_me_view(request):
+    """contact page"""
+    writer = Writer.objects.get(pk=1)
+    context = {
+        'writer_info': writer,
+    }
+
+    return render(request, 'blog/contact-me.html', context)
