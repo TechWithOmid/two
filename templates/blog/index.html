@@ -8,9 +8,11 @@
 				{% for post in page_obj %}
 			    <div class="item mb-5">
 				    <div class="row g-3 g-xl-0">
-					    <div class="col-2 col-xl-3">
-					        <img class="img-fluid post-thumb " src="{{post.thumbnail.url}}" alt="image">
-					    </div>
+						{% if post.thumbnail %}
+							<div class="col-2 col-xl-3">
+								<img class="img-fluid post-thumb " src="{{post.thumbnail.url}}" alt="image">
+							</div>
+						{% endif %}
 					    <div class="col">
 						    <h3 class="title mb-1"><a class="text-link" href="{{post.slug}}">{{post.title}}</a></h3>
 						    <div class="meta mb-1"><span class="date">{{post.date|date:"Y M, d"}}</span></div>
@@ -19,9 +21,9 @@
 					    </div><!--//col-->
 				    </div><!--//row-->
 			    </div><!--//item-->
+				<hr>
 				{% endfor %}
 			    
-			    <hr>
 			    
 			    <nav class="blog-nav nav nav-justified my-5">
 					{% if page_obj.has_previous %}

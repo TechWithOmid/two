@@ -7,7 +7,9 @@
 			    <header class="blog-post-header">
 				    <h2 class="title mb-2">{{post.title}}</h2>
 				    <div class="meta mb-3"><span class="comment"><a  class="text-link" href="#">4 comments</a></span></div>
-					<img src="{{post.thumbnail.url}}" alt="{{post.title}}" class='img-fluid img-thumbnail'>
+					{% if post.thumbnail %}
+						<img src="{{post.thumbnail.url}}" alt="{{post.title}}" class='img-fluid img-thumbnail'>
+					{% endif %}
 			    </header>
 			    
 			    <div class="blog-post-body">{{post.content|safe}}</div>
