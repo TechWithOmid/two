@@ -1,4 +1,6 @@
 {% extends './base.html' %}
+{% load comments %}
+
 
 {% block content %}
 	    
@@ -6,7 +8,10 @@
 		    <div class="container single-col-max-width">
 			    <header class="blog-post-header">
 				    <h2 class="title mb-2">{{post.title}}</h2>
-				    <div class="meta mb-3"><span class="comment"><a  class="text-link" href="#">4 comments</a></span></div>
+				    <div class="meta mb-3"><span class="comment"><a  class="text-link" href="#">
+					{% get_comment_count for post as comment_count %}
+					{{ comment_count }} کامنت
+					</a></span></div>
 					{% if post.thumbnail %}
 						<img src="{{post.thumbnail.url}}" alt="{{post.title}}" class='img-fluid img-thumbnail'>
 					{% endif %}
@@ -16,7 +21,20 @@
 				    
 		    </div><!--//container-->
 	    </article>
-	    
+
+	{% if comment_count %}
+		<hr/>
+		<div class="comments">
+			{% render_comment_list for post %}
+		</div>
+	{% endif %}
+ 
+	<div class="card card-block mb-5">
+	<div class="card-body">
+		<h4 class="card-title text-center pb-3">Post your comment</h4>
+		{% render_comment_form for post %}
+	</div>
+	</div>
 
     
 {% endblock content %}

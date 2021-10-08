@@ -6,10 +6,10 @@ database roadmap is here
 ## TODO
 - [ ] Reactify/Vueify the project
 - [ ] Add Drf
+- [ ] make it search engine friendly
 - [ ] create category page and show the categorys
 - [ ] comment system
     - [ ] send notification to user when replay to the comment
-- [ ] make it search engine friendly
 - [ ] add abilitty that show when post is published
 - [ ] add verbose name for models 
 - [ ] customize admin panel 
