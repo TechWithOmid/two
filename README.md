@@ -8,6 +8,7 @@ database roadmap is here
 - [ ] Add Drf
 - [ ] make it search engine friendly
 - [ ] comment system
+    - [x] make the reply work
     - [ ] customize the comment template
     - [ ] send notification to user when replay to the comment
 - [ ] create category page and show the categorys

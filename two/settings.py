@@ -143,11 +143,20 @@ CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Meida Files Settings
+# Media Files Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # Comment Settings
 COMMENTS_APP = 'django_comments_xtd'
 COMMENTS_XTD_MAX_THREAD_LEVEL = 2
+COMMENTS_XTD_LIST_ORDER = ('-thread_id', 'order')
 COMMENTS_XTD_CONFIRM_EMAIL = False
+
+#  Email settings
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'techwithomid@gmail.com'
+EMAIL_HOST_PASSWORD = 'nwrigmucyfrltuko'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
