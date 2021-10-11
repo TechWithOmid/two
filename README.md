@@ -9,7 +9,8 @@ database roadmap is here
 - [ ] make it search engine friendly
 - [ ] comment system
     - [x] make the reply work
-    - [ ] customize the comment template
+    - [x] customize comment form template
+    - [ ] customize the comment list template
     - [ ] send notification to user when replay to the comment
 - [ ] create category page and show the categorys
 - [ ] add verbose name for models 
