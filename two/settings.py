@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     # customize app
     'blog',
+    'comments',
 ]
 
 MIDDLEWARE = [
@@ -152,6 +153,7 @@ COMMENTS_APP = 'django_comments_xtd'
 COMMENTS_XTD_MAX_THREAD_LEVEL = 2
 COMMENTS_XTD_LIST_ORDER = ('-thread_id', 'order')
 COMMENTS_XTD_CONFIRM_EMAIL = False
+COMMENTS_XTD_FORM_CLASS = 'comments.forms.CommentForm'
 
 #  Email settings
 EMAIL_USE_TLS = True

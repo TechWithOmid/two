@@ -3,6 +3,7 @@
 .idea/
 
 # Virtual Env
+venv
 blogpy/__pycache__/
 
 # Database
