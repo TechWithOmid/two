@@ -1,0 +1,59 @@
+{% load i18n %}
+{% load comments %}
+{% load comments_xtd %}
+
+{% for item in comments %}
+<div class="container">
+        <div class="row">
+            <div class="col-1 mt-2">
+              <a name="c{{ item.comment.id }}"></a>
+              <img src="{{ item.comment.user_email|xtd_comment_gravatar_url }}"
+              height="40" width="40" />
+            </div>
+
+
+              <div class="col-11 mt-4">
+                 <div class="comments p-2">
+                     <!-- Username -->
+                     <div class="mb-3">
+                       <strong>{{ item.comment.name }}</strong>
+                 <!-- End Username -->
+
+                 <!-- Date and Time of Comment-->
+                 <p class="mb-1 small d-flex">
+                     <small class="mr-auto text-muted hidden-sm-down">{{ item.comment.submit_date }}{% if item.comment.url and not item.comment.is_removed %}<a href="{{ item.comment.url }}" target="_new">{% endif %} {% if item.comment.url %}</a>{% endif %}{% if item.comment.user and item.comment.user|has_permission:"django_comments.can_moderate" %}&nbsp;<span class="badge badge-secondary">مدیر</span>{% endif %}</small>
+                 </p>
+                 <!-- End of Date and Time of Comment -->
+                   </div>
+
+                   <div>
+                 <!-- Comment Content -->
+                 {% if item.comment.is_removed %}
+                 <p class="text-muted{% if not allow_feedback and not item.comment.allow_thread %} pb-3{% endif %}">
+                 <em class="text-danger">این کامنت حذف شده است.</em>
+                 </p>
+                 {% else %}
+                 <div class="content{% if not allow_feedback and not item.comment.allow_thread %} pb-3{% endif %}">
+                 {% include "includes/django_comments_xtd/comment_content.html" with content=item.comment.comment %}
+                 </div>
+
+                 {% if item.comment.allow_thread and not item.comment.is_removed %}
+                 {% if allow_feedback %}&nbsp;&nbsp;<span class="text-muted">&bull;</span>&nbsp;&nbsp;{% endif %}
+                 <a class="small mutedlink" href="{{ item.comment.get_reply_url }}">پاسخ</a>
+                 {% endif %}
+
+                 {% endif %}
+                   </div>
+                 <!-- End Comment Content -->
+
+                 <!-- Comment Reply -->
+                 </div>
+                 {% if not item.comment.is_removed and item.children %}
+                   {% render_xtdcomment_tree with comments=item.children %}
+                 {% endif %}
+                 <!-- End Comment Reaply -->
+                 </div>
+
+        </div>
+</div>
+{% endfor %}

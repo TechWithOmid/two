@@ -13,6 +13,7 @@ database roadmap is here
     - [ ] customize the comment list template
     - [ ] send notification to user when replay to the comment
 - [ ] create category page and show the categorys
+- [ ] simple search for searching the posts in blog
 - [ ] add verbose name for models 
 - [ ] customize admin panel 
 - [x] add bootstrap cdn and remove downloaded files

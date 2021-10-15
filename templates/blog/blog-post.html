@@ -7,33 +7,38 @@
 	    
 	    <article class="blog-post px-3 py-5 p-md-5">
 		    <div class="container single-col-max-width">
+
 			    <header class="blog-post-header">
 				    <h2 class="title mb-2">{{post.title}}</h2>
-				    <div class="meta mb-3"><span class="comment"><a  class="text-link" href="#">
-					{% get_comment_count for post as comment_count %}
-					{{ comment_count }} کامنت
-					</a></span></div>
+				    <div class="meta mb-3">
+                        <span class="comment">
+                            <a  class="text-link" href="#comments">
+                                {% get_comment_count for post as comment_count %}
+                                {{ comment_count }} کامنت
+                            </a>
+                        </span>
+                    </div>
 					{% if post.thumbnail %}
 						<img src="{{post.thumbnail.url}}" alt="{{post.title}}" class='img-fluid img-thumbnail'>
 					{% endif %}
 			    </header>
-			    
-			    <div class="blog-post-body">{{post.content|safe}}</div>
-				    
-		    </div><!--//container-->
-	    </article>
 
-	<div class="card card-block mb-5">
-		<div class="card-body">
-			<h4 class="card-title text-center pb-3">دیدگاه</h4>
-			{% render_comment_form for post %}
-		</div>
-	</div>
+                <!-- Post Content -->
+                <div class="blog-post-body">{{post.content|safe}}</div>
 
-	{% if comment_count %}
-		<ul class="media-list">
-			{% render_xtdcomment_tree for post %}
-		</ul>
-	{% endif %}    
+                <div class="container mt-5">
+                    <div class="row d-flex justify-content-center" id="comments">
+                        <h3 class="text-success">کامنت ها</h3>
+                        <hr/>
+                            <div class="mb-2 p-3">
+                                {% render_comment_form for post %}
+                            </div>
+                            <div>
+                                {% render_xtdcomment_tree for post %}
+                            </div>
+                    </div>
+                </div>
 
+            </div><!--//container-->
+        </article>
 {% endblock content %}
