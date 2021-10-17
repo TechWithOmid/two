@@ -10,7 +10,7 @@ database roadmap is here
 - [ ] comment system
     - [x] make the reply work
     - [x] customize comment form template
-    - [ ] customize the comment list template
+    - [x] customize the comment list template
     - [ ] send notification to user when replay to the comment
 - [ ] create category page and show the categorys
 - [ ] simple search for searching the posts in blog
