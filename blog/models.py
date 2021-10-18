@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.text import slugify
 from django.contrib.auth.models import User
 from django.urls import reverse
 from ckeditor.fields import RichTextField
@@ -10,9 +11,18 @@ class Category(models.Model):
     Category only have name that posts will link to it
     """
     name = models.CharField(max_length=256)
+    slug = models.SlugField(blank=True, null=True, unique=True)
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('blog:category-posts', args=[self.slug])
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super(Category, self).save(*args, **kwargs)
 
 
 class Writer(models.Model):
@@ -24,8 +34,8 @@ class Writer(models.Model):
     username = models.CharField(max_length=128)
     avatar = models.ImageField(upload_to='avatar/')
     bio = models.TextField() # show in menu bar
-    about_me = RichTextField(null=True, blank=True) # show in about me page
-    # user be able to add Instagram, Twiiter, Yotube, Telegram link
+    about_me = RichTextField(null=True, blank=True)  # show in about me page
+    # user be able to add Instagram, Twitter, Youtube, Telegram link
 
     def __str__(self):
         return self.username

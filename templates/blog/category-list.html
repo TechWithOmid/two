@@ -1,0 +1,16 @@
+{% extends '../base.html' %}
+
+{% block content %}
+
+<div class="container">
+<h1 class="text-center">دسته بندی‌ها</h1>
+    <div class="row justify-content-evenly">
+          {% for category in categorys %}
+            <div class="col-auto m-5">
+              <a class="bg-light p-2 h3" href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+            </div>
+          {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

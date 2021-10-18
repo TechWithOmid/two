@@ -33,7 +33,7 @@
 				<div class="profile-section pt-3 pt-lg-0">
                                   <img class="profile-image mb-3 rounded-circle mx-auto" src="{% static 'avatar/profile.jpg' %}" alt="image" >			
 					
-					<div class="bio mb-3">چند سالی است که شروع کردم و هر سال یه نظر سنجی نسبتا بزرگ رو در مورد زندگی و شغل و حقوق و تخصص و علاقمندی ها و .. برنامه نویس ها و مدیر سیستم های ایران پیش می برم.</div><!--//bio-->
+					<div class="bio mb-3">چند سالی است که شروع کردم و هر سال یه نظر سنجی نسبتا بزرگ رو در مورد زندگی و شغل و حقوق و تخصص و علاقمندی ها و ...</div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
 			            <li class="list-inline-item"><a href="https://twitter.com/techwithomid"><i class="fab fa-twitter fa-fw"></i></a></li>
 			            
@@ -48,13 +48,19 @@
 				
 				<ul class="navbar-nav flex-column text-start">
 					<li class="nav-item">
-					    <a class="nav-link"  href="{% url 'blog:home' %}"><i class="fas fa-home fa-fw me-2"></i>بلاگ <span class="sr-only">(current)</span></a>
+					    <a class="nav-link"  href="{% url 'blog:home' %}"><i class="fas fa-home fa-fw me-2"></i>  بلاگ<span class="sr-only">(current)</span></a>
 					</li>
+
 					<li class="nav-item">
-					    <a class="nav-link" href="{% url 'blog:about-me' %}"><i class="fas fa-user fa-fw me-2"></i>درباره من</a>
+					    <a class="nav-link"  href="{% url 'blog:category-list' %}"><i class="fas fa-bookmark fa-fw me-2"></i>  دسته‌بندی<span class="sr-only">(current)</span></a>
 					</li>
+
 					<li class="nav-item">
-					    <a class="nav-link"  href="{% url 'blog:contact-me' %}"><i class="fas fa-bookmark fa-fw me-2"></i>تماس با من</a>
+					    <a class="nav-link" href="{% url 'blog:about-me' %}"><i class="fas fa-user fa-fw me-2"></i> درباره من</a>
+					</li>
+
+					<li class="nav-item">
+					    <a class="nav-link"  href="{% url 'blog:contact-me' %}"><i class=" fas fa-envelope fa-fw me-2"></i>  ارتباط با من</a>
 					</li>
 				</ul>
 				
@@ -76,8 +82,6 @@
     </div><!--//main-wrapper-->
 
 	<footer class="footer text-center py-2 theme-bg-dark">
-		   
-		<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
 		<small class="copyright">تمامی حقوق برای سایت «TechWithOmid» محفوظ است.</small>
 	   
 	</footer>
