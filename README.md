@@ -7,12 +7,13 @@ database roadmap is here
 - [ ] Reactify/Vueify the project
 - [ ] Add Drf
 - [ ] make it search engine friendly
-- [ ] comment system
+- [x] comment system
     - [x] make the reply work
     - [x] customize comment form template
     - [x] customize the comment list template
     - [ ] send notification to user when replay to the comment
-- [ ] create category page and show the categorys
+- [x] create category page and show the categorys
+- [ ] fix the footer problem
 - [ ] simple search for searching the posts in blog
 - [ ] add verbose name for models 
 - [ ] customize admin panel 
