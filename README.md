@@ -15,6 +15,7 @@ database roadmap is here
 - [x] create category page and show the categorys
 - [x] fix the footer problem
 - [x] simple search for searching the posts in blog
+- [ ] change the mobile view hamburger menu icon
 - [ ] make category page beautiful
 - [ ] add verbose name for models 
 - [ ] customize admin panel 
