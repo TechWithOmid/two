@@ -11434,7 +11434,10 @@ a.text-link:hover {
 }
 
 .footer {
-	color: rgba(255, 255, 255, 0.7)
+	color: rgba(255, 255, 255, 0.7);
+    margin-right: 280px;
+}
+
 }
 
 .footer a {
@@ -11677,6 +11680,9 @@ a.text-link:hover {
 	}
 	.main-wrapper {
 		margin-left: 0;
+		margin-right: 0;
+	}
+	.footer{
 		margin-right: 0;
 	}
 }
