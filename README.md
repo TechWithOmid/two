@@ -14,7 +14,7 @@ database roadmap is here
     - [ ] send notification to user when replay to the comment
 - [x] create category page and show the categorys
 - [x] fix the footer problem
-- [ ] simple search for searching the posts in blog
+- [x] simple search for searching the posts in blog
 - [ ] make category page beautiful
 - [ ] add verbose name for models 
 - [ ] customize admin panel 
