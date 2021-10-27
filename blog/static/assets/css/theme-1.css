@@ -37,9 +37,17 @@
 	}
 }
 
+
+
+@font-face {
+font-family: Vazir;
+url('{% static 'assets/fonts/Vazir-Regular.ttf'}') format('truetype');
+font-weight: normal;
+}
+
 body {
 	margin: 0;
-	font-family: var(--bs-font-sans-serif);
+	font-family: Vazir;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -4796,7 +4804,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-dark .navbar-toggler {
-	color: rgba(255, 255, 255, 0.55);
+	color: rgba(255, 255, 255);
 	border-color: rgba(255, 255, 255, 0.1)
 }
 
@@ -11334,7 +11342,7 @@ a.text-link:hover {
 	-webkit-opacity: .8;
 	-moz-opacity: .8;
 	opacity: .8;
-	border: 1px solid rgba(255, 255, 255, 0.8);
+	border: none;
 	padding: .25rem .6rem
 }
 
