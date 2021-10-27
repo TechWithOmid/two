@@ -16,6 +16,7 @@ database roadmap is here
 - [x] fix the footer problem
 - [x] simple search for searching the posts in blog
 - [x] change the mobile view hamburger menu icon
+- [ ] make the TechWithOmid text link to home page in mobile view
 - [ ] make category page beautiful
 - [ ] add verbose name for models 
 - [ ] customize admin panel 
