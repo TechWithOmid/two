@@ -19,8 +19,8 @@ database roadmap is here
 - [x] add scroll back to top
 - [ ] make the TechWithOmid text link to home page in mobile view
 - [ ] make category page beautiful
-- [ ] add verbose name for models 
 - [ ] customize admin panel 
+- [x] add verbose name for models 
 - [x] add bootstrap cdn and remove downloaded files
 - [x] contact me
 - [x] fix humberger menu
