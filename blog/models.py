@@ -4,6 +4,7 @@ from django.utils.text import slugify
 from django.contrib.auth.models import User
 from django.urls import reverse
 from ckeditor.fields import RichTextField
+from django.utils.translation import ugettext_lazy as _
 
 
 class Category(models.Model):
@@ -24,6 +25,10 @@ class Category(models.Model):
             self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
 
+    class Meta:
+        verbose_name = _("دسته بندی")
+        verbose_name_plural = _("دسته بندی‌ها")
+    
 
 class Writer(models.Model):
     """
@@ -39,6 +44,10 @@ class Writer(models.Model):
 
     def __str__(self):
         return self.username
+
+    class Meta:
+        verbose_name = _("نویسنده")
+        verbose_name_plural = _("نویسنده ها")
 
 
 class Post(models.Model):
@@ -65,3 +74,8 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog:post_detail', args=[self.slug])
+
+    class Meta:
+        verbose_name = _("پست")
+        verbose_name_plural = _("پست ها")
+
