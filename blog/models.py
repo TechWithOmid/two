@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from ckeditor.fields import RichTextField
 from django.utils.translation import ugettext_lazy as _
+from django.template.defaultfilters import truncatechars
 
 
 class Category(models.Model):
@@ -55,14 +56,14 @@ class Post(models.Model):
     blog articles 
     """
     STATUS = {
-        ('d', 'Draft'),
-        ('p', 'Plublished'),
+        ('d', 'پیش‌نویس'),
+        ('p', 'منتشر شده'),
     }
     title = models.CharField(max_length=256, verbose_name="عنوان")
     slug = models.SlugField(verbose_name="لینک")
     thumbnail = models.ImageField(
         upload_to='uploads/%Y/%m/%d/', null=True, blank=True, verbose_name="عکس")
-    description = models.TextField(max_length=280, verbose_name="توضیحات")
+#    description = models.TextField(max_length=280, verbose_name="توضیحات")
     content = RichTextField(verbose_name="محتوا")
     category = models.ManyToManyField(Category, verbose_name="دسته بندی")
     date = models.DateTimeField(default=timezone.now, verbose_name="تاریخ")
@@ -74,6 +75,10 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog:post_detail', args=[self.slug])
+
+    @property
+    def description(self):
+        return truncatechars(self.content, 100)
 
     class Meta:
         verbose_name = _("پست")
