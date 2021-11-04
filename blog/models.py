@@ -63,7 +63,6 @@ class Post(models.Model):
     slug = models.SlugField(verbose_name="لینک")
     thumbnail = models.ImageField(
         upload_to='uploads/%Y/%m/%d/', null=True, blank=True, verbose_name="عکس")
-#    description = models.TextField(max_length=280, verbose_name="توضیحات")
     content = RichTextField(verbose_name="محتوا")
     category = models.ManyToManyField(Category, verbose_name="دسته بندی")
     date = models.DateTimeField(default=timezone.now, verbose_name="تاریخ")

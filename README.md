@@ -20,6 +20,8 @@ database roadmap is here
 - [ ] make the TechWithOmid text link to home page in mobile view
 - [ ] make category page beautiful
 - [ ] customize admin panel 
+    - [x] customize fields
+    - [ ] customize template
 - [x] add verbose name for models 
 - [x] add bootstrap cdn and remove downloaded files
 - [x] contact me

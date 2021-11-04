@@ -42,17 +42,40 @@
 				{% endfor %}
 			    
 			    
-			    <nav class="blog-nav nav nav-justified my-5">
-					{% if page_obj.has_previous %}
-					<a class="nav-link-next m-1 nav-item nav-link rounded" href="?page={{ page_obj.previous_page_number }}">قبلی<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-					<a class="nav-link-prev bg-light disabled m-1 nav-item nav-link rounded" href="#">بعدی<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-					{% endif %}
 
-					{% if page_obj.has_next %}
-					<a class="nav-link-next bg-light disabled m-1 nav-item nav-link rounded" href="#">قبلی<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-					<a class="nav-link-prev m-1 nav-item nav-link rounded" href="?page={{ page_obj.next_page_number }}">بعدی<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-					{% endif %}
-				</nav>
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-center">
+    {% if page_obj.has_previous%}
+    <li class="page-item active mx-1">
+        <a class="page-link rounded" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% else %}
+    <li class="page-item disabled mx-1">
+      <a class="page-link rounded" href="" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% endif %}
+
+    <li class="page-item mx-1 disabled"><a class="page-link rounded" href="">{{ page_obj.number }} از {{ page_obj.paginator.num_pages }}</a></li>
+
+    {% if page_obj.has_next%}
+    <li class="page-item active mx-1">
+        <a class="page-link rounded" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    {%else%}
+    <li class="page-item disabled mx-1">
+      <a class="page-link rounded" href="" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
 				
 		    </div>
 	    </section>
