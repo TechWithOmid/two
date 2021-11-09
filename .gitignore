@@ -16,7 +16,7 @@ blog/migrations/
 .env
 
 # Static&Media files
-files/
+staticfiles/
 media/
 
 # Django 
