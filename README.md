@@ -31,5 +31,5 @@ database roadmap is here
 - [x] draft post
 - [x] add category
 - [x] add pagination
-    - [ ] make the pagination better (show the page numbers)
+    - [x] make the pagination better (show the page numbers)
     - [ ] after 10 post show *more* btn for and 5 more post

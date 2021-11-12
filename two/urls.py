@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.conf.urls import url
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('dj-admin/', admin.site.urls),
     path('', include('blog.urls')),
     url(r'^comments/', include('django_comments_xtd.urls')),
 ]
