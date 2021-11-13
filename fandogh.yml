@@ -13,3 +13,5 @@ spec:
   volume_mounts:
   - mount_path: /usr/src/app/media
     sub_path: blog/media
+  domains:
+    - name: techwithomid.ir
