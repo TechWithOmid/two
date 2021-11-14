@@ -33,7 +33,7 @@
 				<div class="profile-section pt-3 pt-lg-0">
                                   <img class="profile-image mb-3 rounded-circle mx-auto" src="{% static 'avatar/profile.jpg' %}" alt="image" >			
 					
-					<div class="bio mb-3">چند سالی است که شروع کردم و هر سال یه نظر سنجی نسبتا بزرگ رو در مورد زندگی و شغل و حقوق و تخصص و علاقمندی ها و ...</div><!--//bio-->
+                                  <div class="bio mb-3">{% if writer_info.bio %}{{ writer_info.bio }} {% endif %}</div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
 			            <li class="list-inline-item"><a href="https://twitter.com/techwithomid"><i class="fab fa-twitter fa-fw"></i></a></li>
 			            
