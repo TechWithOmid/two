@@ -21,7 +21,7 @@ database roadmap is here
 - [ ] make category page beautiful
 - [ ] customize admin panel 
     - [x] customize fields
-    - [ ] fix ckeditor - make it resposiable
+    - [x] fix ckeditor - make it resposiable
     - [ ] customize template
 - [x] create there is no post here for category page
 - [ ] create 404, 500 page and other error pages

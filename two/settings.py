@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3*j%!n*4#@y7#f3533w5&o*5n7i1hp(#^qcm#$9t956#igcik&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["techwithomid.ir", "localhost"]
 
 
 # Application definition
@@ -133,6 +133,12 @@ STATIC_URL = '/static/'
 
 # CKEditor settings
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+CKEDITOR_CONFIGS = {
+'default': {
+    'width': 'auto',
+
+          },
+    }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -149,3 +155,4 @@ COMMENTS_XTD_MAX_THREAD_LEVEL = 2
 COMMENTS_XTD_LIST_ORDER = ('-thread_id', 'order')
 COMMENTS_XTD_CONFIRM_EMAIL = False
 COMMENTS_XTD_FORM_CLASS = 'comments.forms.CommentForm'
+
