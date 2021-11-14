@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
-from .models import Post, Writer, Category
 from django.db.models import Q
+from .models import Post, Writer, Category
 
 
 
@@ -23,7 +23,8 @@ def home_page_view(request):
 
 def detail_page_view(request, slug):
     """Detail Page"""
-    post = Post.objects.get(slug=slug, status='p')
+    obj = Post.objects.filter(status='p')
+    post = get_object_or_404(obj, slug=slug)
     writer = Writer.objects.get(pk=1)
     context = {
         'post': post,
@@ -44,7 +45,7 @@ def category_list_view(request):
 
 
 def category_post_view(request, category):
-    posts = Category.objects.get(slug=category).post_set.filter(status='p').order_by('-date')
+    posts = get_object_or_404(Category, slug=category).post_set.filter(status='p').order_by('-date')
     writer = Writer.objects.get(pk=1)
 
     context = {

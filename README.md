@@ -21,7 +21,12 @@ database roadmap is here
 - [ ] make category page beautiful
 - [ ] customize admin panel 
     - [x] customize fields
+    - [ ] fix ckeditor - make it resposiable
     - [ ] customize template
+- [x] create there is no post here for category page
+- [ ] create 404, 500 page and other error pages
+- [x] force social media link to open in new tap
+- [x] create telegram link
 - [x] add verbose name for models 
 - [x] add bootstrap cdn and remove downloaded files
 - [x] contact me
