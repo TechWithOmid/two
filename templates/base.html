@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Template">
+    <meta name="description" content="وبلاگ امید محمدی, وبلاگی درمورد برنامه نویسی و تکنولوژی">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     
     <!-- FontAwesome JS-->
@@ -70,22 +70,22 @@
     </header>
     
     <div class="main-wrapper">
+        <section id="search-section" class="cta-section py-5">
+            {% block search %}
+            {% endblock search %}
+        </section>
+
+        <section id="main-section" class="blog-list px-3 py-5 p-md-5">
+
+        <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
 
 
-    {% block search %}
-    {% endblock search %}
+            {% block content %}
+            {% endblock content %}
 
-    <section class="blog-list px-3 py-5 p-md-5">
-
-    <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
-
-		{% block content %}
-		{% endblock content %}
-
-	</section>
+        </section>
 	    
     </div><!--//main-wrapper-->
 

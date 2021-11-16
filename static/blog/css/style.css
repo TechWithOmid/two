@@ -11457,11 +11457,11 @@ a.text-link:hover {
 }
 
 .blog-list .item .title a {
-	color: #292929
+	color: #29292;
 }
 
 .blog-list .item .title a:hover {
-	color: #292929
+	color: #29292;
 }
 
 .blog-list .item .post-thumb {
@@ -11817,4 +11817,9 @@ left: 50%;
       background-color: #5469c9;
       color: #fff;
     }
+}
+
+
+#search-section{
+    background-color: #fafafa;
 }

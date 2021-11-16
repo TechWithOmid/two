@@ -7,6 +7,9 @@ database roadmap is here
 - [ ] Reactify/Vueify the project
 - [ ] Add Drf
 - [ ] make it search engine friendly
+- [ ] create 404, 500 page and other error pages
+- [ ] create volume and use mysql or postgresql as db
+- [ ] create dark mode and light mode feature
 - [x] comment system
     - [x] make the reply work
     - [x] customize comment form template
@@ -24,7 +27,6 @@ database roadmap is here
     - [x] fix ckeditor - make it resposiable
     - [ ] customize template
 - [x] create there is no post here for category page
-- [ ] create 404, 500 page and other error pages
 - [x] force social media link to open in new tap
 - [x] create telegram link
 - [x] add verbose name for models 

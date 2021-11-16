@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-3*j%!n*4#@y7#f3533w5&o*5n7i1hp(#^qcm#$9t956#igcik&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["techwithomid.ir", "localhost"]
+ALLOWED_HOSTS = ["techwithomid.ir", "localhost", "techwithomid.fandogh.cloud"]
 
 
 # Application definition
@@ -87,12 +87,15 @@ WSGI_APPLICATION = 'two.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'postgres',
+    'USER': 'postgres',
+    'PASSWORD': 'I-Love_mY/pc@82',
+    'HOST': 'blogdb',
+    'PORT': '5432',
+  }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -118,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'fa-ir'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 
