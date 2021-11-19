@@ -50,6 +50,7 @@ def category_post_view(request, category):
 
     context = {
         'posts': posts,
+        'category': Category.objects.get(slug=category),
         'writer_info': writer,
     }
     return render(request, 'blog/category-post.html', context)
@@ -63,6 +64,7 @@ def search_result_view(request):
 
     context = {
         'posts': posts,
+        'search_query': request.GET.get('query'),
         'writer_info': writer,
 
     }
