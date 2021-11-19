@@ -2125,7 +2125,7 @@ progress {
 	font-weight: 400;
 	line-height: 1.5;
 	color: #292929;
-	background-color: #fff;
+	background-color: #2a2929;
 	background-clip: padding-box;
 	border: 1px solid #9c9c9c;
 	-webkit-appearance: none;
@@ -4839,7 +4839,7 @@ fieldset:disabled .btn {
 .card-body {
 	-webkit-flex: 1 1 auto;
 	flex: 1 1 auto;
-	padding: 1rem 1rem
+	padding: 1rem 1rem;
 }
 
 .card-title {
@@ -11687,7 +11687,7 @@ a.text-link:hover {
 }
 
 .comments{
-  background-color: #f5f5f5;
+  background-color: #2a2929;
   border-radius: 20px;
 }
 

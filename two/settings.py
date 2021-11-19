@@ -87,23 +87,23 @@ WSGI_APPLICATION = 'two.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-#  'default': {
-#    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#    'NAME': 'postgres',
-#    'USER': 'postgres',
-#    'PASSWORD': 'I-Love_mY/pc@82',
-#    'HOST': 'blogdb',
-#    'PORT': '5432',
-#  }
-
   'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     'NAME': 'postgres',
     'USER': 'postgres',
-    'PASSWORD': 'postgres',
-    'HOST': 'localhost',
+    'PASSWORD': 'I-Love_mY/pc@82',
+    'HOST': 'blogdb',
     'PORT': '5432',
   }
+
+#  'default': {
+#    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#    'NAME': 'postgres',
+#    'USER': 'postgres',
+#    'PASSWORD': 'postgres',
+#    'HOST': 'localhost',
+#    'PORT': '5432',
+#  }
 }
 
 # Password validation
