@@ -1,5 +1,6 @@
 {% extends '../base.html' %}
 
+{% block description %}وبلاگ امید محمدی, وبلاگی درمورد برنامه نویسی و تکنولوژی{% endblock description %}
 {% block title %}TechWithOmid | صفحه اصلی{% endblock title %}
 {% block search %}
         <section id="search-section" class="cta-section py-5">
@@ -43,39 +44,43 @@
 			    
 			    
 
-<nav aria-label="Page navigation">
-  <ul class="pagination justify-content-center">
-    {% if page_obj.has_previous%}
-    <li class="page-item active mx-1">
-        <a class="page-link rounded" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    {% else %}
-    <li class="page-item disabled mx-1">
-      <a class="page-link rounded" href="" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    {% endif %}
+                {% if posts|length < 5 %}
+                                            
+                {% else %}
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center pagination-dark">
+                    {% if page_obj.has_previous%}
+                    <li class="page-item active mx-1">
+                        <a class="page-link rounded" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled mx-1">
+                      <a class="page-link rounded" href="" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    {% endif %}
 
-    <li class="page-item mx-1 disabled"><a class="page-link rounded" href="">{{ page_obj.number }} از {{ page_obj.paginator.num_pages }}</a></li>
+                    <li class="page-item mx-1 disabled"><a class="page-link rounded" href="">{{ page_obj.number }} از {{ page_obj.paginator.num_pages }}</a></li>
 
-    {% if page_obj.has_next%}
-    <li class="page-item active mx-1">
-        <a class="page-link rounded" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-    {%else%}
-    <li class="page-item disabled mx-1">
-      <a class="page-link rounded" href="" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-    {% endif %}
-  </ul>
-</nav>
+                    {% if page_obj.has_next%}
+                    <li class="page-item active mx-1">
+                        <a class="page-link rounded" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                    {%else%}
+                    <li class="page-item disabled mx-1">
+                      <a class="page-link rounded" href="" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                    {% endif %}
+                  </ul>
+                </nav>
+                {% endif %}
 				
 		    </div>
 	    </section>

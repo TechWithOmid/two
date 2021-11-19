@@ -3,6 +3,8 @@
 {% load comments_xtd %}
 
 
+{% block description %}{{post.content|truncatechars:150|safe}}{% endblock description %}
+
 {% block title %}{{post.title}}{% endblock title %}
 {% block content %}
 	    <article class="blog-post px-3 py-5 p-md-5">

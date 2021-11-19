@@ -17,6 +17,7 @@ def home_page_view(request):
     context = {
         'page_obj': page_obj,
         'writer_info': writer,
+        'posts': posts,
     }
     return render(request, 'blog/index.html', context)
 
