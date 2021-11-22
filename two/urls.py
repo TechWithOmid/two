@@ -18,10 +18,18 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import url
+from django.contrib.sitemaps.views import sitemap
+from blog.sitemaps import PostSitemap
+
+sitemaps = {
+        "posts": PostSitemap,
+        }
 
 urlpatterns = [
     path('dj-admin/', admin.site.urls),
     path('', include('blog.urls')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
+     name='django.contrib.sitemaps.views.sitemap'),
     url(r'^comments/', include('django_comments_xtd.urls')),
 ]
 

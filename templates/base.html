@@ -76,22 +76,18 @@
             {% endblock search %}
 
         <section id="main-section" class="blog-list px-3 py-5 p-md-5">
+            <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+              <i class="fas fa-arrow-up"></i>
+            </button>
 
-        <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
-          <i class="fas fa-arrow-up"></i>
-        </button>
-
-
-            {% block content %}
-            {% endblock content %}
+                {% block content %}
+                {% endblock content %}
 
         </section>
-	    
     </div><!--//main-wrapper-->
 
 	<footer class="footer py-2 text-center theme-bg-dark">
 		<small class="copyright">تمامی حقوق برای سایت <a href="{% url 'blog:home' %}">«TechWithOmid»</a> محفوظ است.</small>
-	   
 	</footer>
        
     <!-- Javascript -->          

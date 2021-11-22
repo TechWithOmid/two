@@ -2,6 +2,7 @@
 
 {% block description %}وبلاگ امید محمدی, وبلاگی درمورد برنامه نویسی و تکنولوژی{% endblock description %}
 {% block title %}TechWithOmid | صفحه اصلی{% endblock title %}
+
 {% block search %}
         <section id="search-section" class="cta-section py-5">
 		    <div class="container text-center single-col-max-width">
@@ -28,12 +29,12 @@
 				    <div class="row g-3 g-xl-0">
 						{% if post.thumbnail %}
 							<div class="col-2 col-xl-3">
-								<img class="img-fluid post-thumb " src="{{post.thumbnail.url}}" alt="image">
+                                <img class="img-fluid post-thumb " src="{{post.thumbnail.url}}" alt="{{post.title}}">
 							</div>
 						{% endif %}
 					    <div class="col">
-						    <h3 class="title mb-1"><a class="text-link" href="{{ post.get_absolute_url }}">{{post.title}}</a></h3>
-                                                    <div class="meta mb-1"><span class="date">{{post.date|date:"Y M, d"}} | {% for category in post.category.all %} <a href="{{category.get_absolute_url}}">{{ category.name }}</a> {% endfor %}</span></div>
+						    <h1 class="title mb-1"><a class="text-link" href="{{ post.get_absolute_url }}">{{post.title}}</a></h1>
+                                <div class="meta mb-1"><span class="date">{{post.date|date:"Y M, d"}} | {% for category in post.category.all %} <a href="{{category.get_absolute_url}}">{{ category.name }}</a> {% endfor %}</span></div>
 						    <div class="intro">{{post.content|truncatechars:256|safe}}</div>
 						    <a class="text-link" href="{{post.slug}}">بیشتر &larr;</a>
 					    </div><!--//col-->

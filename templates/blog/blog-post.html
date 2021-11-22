@@ -3,7 +3,7 @@
 {% load comments_xtd %}
 
 
-{% block description %}{{post.content|truncatechars:150|safe}}{% endblock description %}
+{% block description %}{{post.content|striptags|truncatechars:150}}{% endblock description %}
 
 {% block title %}{{post.title}}{% endblock title %}
 {% block content %}

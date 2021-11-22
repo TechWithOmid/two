@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ["techwithomid.ir", "localhost", "techwithomid.fandogh.cloud"]
 
 # Application definition
 
+SITE_ID = 1
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+	'django.contrib.sitemaps',
 
     # third party
     'ckeditor',
@@ -87,23 +90,23 @@ WSGI_APPLICATION = 'two.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'postgres',
-    'USER': 'postgres',
-    'PASSWORD': 'I-Love_mY/pc@82',
-    'HOST': 'blogdb',
-    'PORT': '5432',
-  }
-
 #  'default': {
 #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #    'NAME': 'postgres',
 #    'USER': 'postgres',
-#    'PASSWORD': 'postgres',
-#    'HOST': 'localhost',
+#    'PASSWORD': 'I-Love_mY/pc@82',
+#    'HOST': 'blogdb',
 #    'PORT': '5432',
 #  }
+
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'postgres',
+    'USER': 'postgres',
+    'PASSWORD': 'postgres',
+    'HOST': 'localhost',
+    'PORT': '5432',
+  }
 }
 
 # Password validation
