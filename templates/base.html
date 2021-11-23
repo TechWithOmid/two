@@ -35,7 +35,7 @@
                   <img class="profile-image mb-3 rounded-circle mx-auto" src="{% static 'avatar/profile.jpg' %}" alt="image" >			
 
 
-                  <div class="bio mb-3">{% if writer_info.bio %}{{ writer_info.bio }} {% endif %}</div><!--//bio-->
+                  <div class="bio mb-3">{% if writer_info %}{{ writer_info.bio }}{% endif %}</div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
 			            <li class="list-inline-item"><a href="https://twitter.com/techwithomid" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
 			            
