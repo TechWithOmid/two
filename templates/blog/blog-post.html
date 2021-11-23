@@ -2,10 +2,10 @@
 {% load comments %}
 {% load comments_xtd %}
 
-
+{% block keywords %}{{post.keywords}}{% endblock keywords%}
 {% block description %}{{post.content|striptags|truncatechars:150}}{% endblock description %}
-
 {% block title %}{{post.title}}{% endblock title %}
+
 {% block content %}
 	    <article class="blog-post px-3 py-5 p-md-5">
 		    <div class="container single-col-max-width">

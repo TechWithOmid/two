@@ -7,9 +7,10 @@ database roadmap is here
 - [ ] Reactify/Vueify the project
 - [ ] Add Drf
 - [ ] make it search engine friendly
+    - [ ] create keyword in models and add it to meta tag
 - [ ] create 404, 500 page and other error pages
-- [ ] create volume and use mysql or postgresql as db
-- [ ] create dark mode and light mode feature
+- [x] create volume and use mysql or postgresql as db
+- [x] create dark mode and light mode feature
 - [x] comment system
     - [x] make the reply work
     - [x] customize comment form template

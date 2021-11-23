@@ -65,6 +65,7 @@ class Post(models.Model):
         upload_to='uploads/%Y/%m/%d/', null=True, blank=True, verbose_name="عکس")
     content = RichTextField(verbose_name="محتوا")
     category = models.ManyToManyField(Category, verbose_name="دسته بندی")
+    keywords=models.CharField(max_length=1024, verbose_name="کلمات کلیدی", default="وبلاگ امید,")
     date = models.DateTimeField(default=timezone.now, verbose_name="تاریخ")
     owner = models.ForeignKey(Writer, on_delete=models.CASCADE, verbose_name="نویسنده")
     status = models.CharField(max_length=1, choices=STATUS, default='d', verbose_name="وضعیت")
