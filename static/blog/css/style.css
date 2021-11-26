@@ -11175,7 +11175,7 @@ fieldset:disabled .btn {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: #4f4f4f
+	color: #fff
 }
 
 h1,
@@ -11190,7 +11190,7 @@ h5,
 .h5,
 h6,
 .h6 {
-	color: #292929;
+	color: #fff;
 	font-weight: bold
 }
 
