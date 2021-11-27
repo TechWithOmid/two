@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3*j%!n*4#@y7#f3533w5&o*5n7i1hp(#^qcm#$9t956#igcik&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -91,23 +91,23 @@ WSGI_APPLICATION = 'two.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-#  'default': {
-#    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#    'NAME': 'postgres',
-#    'USER': 'postgres',
-#    'PASSWORD': 'I-Love_mY/pc@82',
-#    'HOST': 'blogdb',
-#    'PORT': '5432',
-#  }
-
   'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     'NAME': 'postgres',
     'USER': 'postgres',
-    'PASSWORD': 'postgres',
-    'HOST': 'localhost',
+    'PASSWORD': 'I-Love_mY/pc@82',
+    'HOST': 'blogdb',
     'PORT': '5432',
   }
+
+#  'default': {
+#    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#    'NAME': 'postgres',
+#    'USER': 'postgres',
+#    'PASSWORD': 'postgres',
+#    'HOST': 'localhost',
+#    'PORT': '5432',
+#  }
 }
 
 # Password validation
