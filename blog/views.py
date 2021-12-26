@@ -4,7 +4,6 @@ from django.db.models import Q
 from .models import Post, Category
 
 
-
 def home_page_view(request):
     """Home Page"""
     posts = Post.objects.filter(status='p').order_by('-date')
