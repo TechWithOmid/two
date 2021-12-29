@@ -6,6 +6,7 @@ from django.urls import reverse
 from ckeditor.fields import RichTextField
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import truncatechars
+from datetime import date
 
 
 class Category(models.Model):
@@ -66,7 +67,7 @@ class Post(models.Model):
     content = RichTextField(verbose_name="محتوا")
     category = models.ManyToManyField(Category, verbose_name="دسته بندی")
     keywords=models.CharField(max_length=1024, verbose_name="کلمات کلیدی", default="وبلاگ امید,")
-    date = models.DateTimeField(default=timezone.now, verbose_name="تاریخ")
+    pub_date = models.DateTimeField(default=timezone.now, verbose_name="تاریخ")
     owner = models.ForeignKey(Writer, on_delete=models.CASCADE, verbose_name="نویسنده")
     status = models.CharField(max_length=1, choices=STATUS, default='d', verbose_name="وضعیت")
 
@@ -79,6 +80,19 @@ class Post(models.Model):
     @property
     def description(self):
         return truncatechars(self.content, 100)
+
+    @property
+    def passed_days(self):
+        today = date.today()
+        day = str(today - self.pub_date.date() ).split(',', 1)[0]
+        p_days = day.split(' ', 1)[0] # remove days from the output, it look like this -3 days but now it only -3
+        
+        if self.pub_date.date() < date.today():
+            p_days = f"{p_days} روز گذشته"
+        elif self.pub_date.date() == date.today():
+            p_days = f"امروز"
+
+        return p_days
 
     class Meta:
         verbose_name = _("پست")

@@ -6,7 +6,7 @@ from .models import Post, Category
 
 def home_page_view(request):
     """Home Page"""
-    posts = Post.objects.filter(status='p').order_by('-date')
+    posts = Post.objects.filter(status='p').order_by('-pub_date')
     paginator = Paginator(posts, 5)
 
     page_number = request.GET.get('page')
@@ -39,7 +39,7 @@ def category_list_view(request):
 
 
 def category_post_view(request, category):
-    posts = get_object_or_404(Category, slug=category).post_set.filter(status='p').order_by('-date')
+    posts = get_object_or_404(Category, slug=category).post_set.filter(status='p').order_by('-pub_date')
 
     context = {
         'posts': posts,

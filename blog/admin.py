@@ -10,9 +10,9 @@ admin.site.unregister(Group)
 # Register Models
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    date_hierarchy = 'date'
+    date_hierarchy = 'pub_date'
     list_display = ('title', 'category_list', 'publish_date', 'status', )
-    list_filter = ('status', 'category__name', 'date',)
+    list_filter = ('status', 'category__name', 'pub_date',)
     list_editable = ('status', )
     search_fields = ['title']
     list_per_page = 5
@@ -23,7 +23,7 @@ class PostAdmin(admin.ModelAdmin):
     
     def publish_date(self,obj):
         """ Show the date in list_display using YY/MM/DD format """
-        return obj.date.strftime("%Y/%m/%d")
+        return obj.pub_date.strftime("%Y/%m/%d")
 
 
 @admin.register(Category)
