@@ -120,12 +120,39 @@ STATIC_URL = '/static/'
 
 # CKEditor settings
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+# CKEDITOR_CONFIGS = {
+# 'default': {
+#     'width': 'auto',
+#     },
+# }
 CKEDITOR_CONFIGS = {
-'default': {
-    'width': 'auto',
+    'default': {
+        'skin': 'moono',
+        'toolbar_MyCustomToolbar': [
+            {'name': 'basic', 'items': [
+                'Source',
+                '-',
+                'Bold',
+                'Italic',
+                'CodeSnippet'  # add the codesnippet button name
+            ]}
+        ],
 
-          },
+        'codeSnippet_theme': 'monokai',
+        # uncomment to restrict only those languages
+        'codeSnippet_languages': {
+            'python': 'Python',
+        },
+        'toolbar': 'MyCustomToolbar',
+        'extraPlugins': ','.join(
+            [
+                # add the follow plugins
+                'codesnippet',
+                # 'widget',
+                # 'dialog',
+            ]),
     }
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
