@@ -3,6 +3,15 @@ use django and drf for backend
 use react.js or vue.js for frontend
 database roadmap is here
 
+### Using in local
+for using the project in local we need to change env for setting module that defined by
+django admin like this:
+for production:
+export DJANGO_SETTINGS_MODULE="two.settings" 
+
+for development:
+export DJANGO_SETTINGS_MODULE="two.settings.dev"
+
 ## TODO
 - [ ] Reactify/Vueify the project
 - [ ] Add Drf

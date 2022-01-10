@@ -25,3 +25,6 @@ media/
 *.pyc
 __pycache__
 db.sqlite3
+
+# server stuff
+passenger_wsgi.py
