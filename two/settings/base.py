@@ -1,5 +1,4 @@
 from pathlib import Path
-from dotenv import load_dotenv, find_dotenv
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -10,9 +9,6 @@ SECRET_KEY = "django-insecure-3*j%!n*4#@y7#f3533w5&o*5n7i1hp(#^qcm#$9t956#igcik&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-ALLOWED_HOSTS = ["techwithomid.ir", "www.techwithomid.ir"]
-
 
 # Application definition
 
