@@ -112,8 +112,8 @@ STATIC_ROOT = '/home/techwith/public_html/static'
 STATIC_URL = '/static/'
 
 # Media Files Settings
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = '/home/techwith/public_html/media'
+MEDIA_URL = '/media/'
 
 # CKEditor settings
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
