@@ -29,3 +29,5 @@ two/settings/dev.py
 
 # server stuff
 passenger_wsgi.py
+blogDB
+tmp/
