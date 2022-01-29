@@ -1,52 +1,39 @@
-# Tech
-use django and drf for backend
-use react.js or vue.js for frontend
-database roadmap is here
+# TECH with OMID
+This is my [blog](https://techwithomid.ir) source code writen in Django.
 
-### Using in local
-for using the project in local we need to change env for setting module that defined by
-django admin like this:
-for production:
-export DJANGO_SETTINGS_MODULE="two.settings" 
+**DO NOT USE THE PROJEECT IN PRODUCTION**
 
-for development:
+## HOW TO USE PROJECT?
+First of all you should define `DJANGO_SETTINGS_MODULE` for specify if project run in development environment or production.
+
+#### Development 
+Execute this in terminal for specify what setting file Django should use:
+```bash
 export DJANGO_SETTINGS_MODULE="two.settings.dev"
+```
+Install the dependencies:
+```bash
+pip install -r requirements.txt
+```
+Run the make migrations and migrate command:
+```bash 
+python manage.py makemigrations blog
+python manage.py migrate
+```
 
-## TODO
-- [ ] Reactify/Vueify the project
-- [ ] Add Drf
-- [ ] make it search engine friendly
-    - [ ] create keyword in models and add it to meta tag
-- [ ] create 404, 500 page and other error pages
-- [x] create volume and use mysql or postgresql as db
-- [x] create dark mode and light mode feature
-- [x] comment system
-    - [x] make the reply work
-    - [x] customize comment form template
-    - [x] customize the comment list template
-    - [ ] send notification to user when replay to the comment
-- [x] create category page and show the categorys
-- [x] fix the footer problem
-- [x] simple search for searching the posts in blog
-- [x] change the mobile view hamburger menu icon
-- [x] add scroll back to top
-- [ ] make the TechWithOmid text link to home page in mobile view
-- [ ] make category page beautiful
-- [ ] customize admin panel 
-    - [x] customize fields
-    - [x] fix ckeditor - make it resposiable
-    - [ ] customize template
-- [x] create there is no post here for category page
-- [x] force social media link to open in new tap
-- [x] create telegram link
-- [x] add verbose name for models 
-- [x] add bootstrap cdn and remove downloaded files
-- [x] contact me
-- [x] fix humberger menu
-- [x] create post
-- [x] delete post
-- [x] draft post
-- [x] add category
-- [x] add pagination
-    - [x] make the pagination better (show the page numbers)
-    - [ ] after 10 post show *more* btn for and 5 more post
+
+#### Production
+Execute this in terminal for specify what setting file Django should use:
+```bash
+export DJANGO_SETTINGS_MODULE="two.settings" 
+```
+Install the dependencies:
+```bash
+pip install -r requirements.txt
+```
+Run the make migrations and migrate command:
+```bash 
+python manage.py makemigrations blog
+python manage.py migrate
+```
+In production passenger wsgi file should change.
