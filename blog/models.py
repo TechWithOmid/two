@@ -79,20 +79,18 @@ class Post(models.Model):
 
     @property
     def description(self):
+        """Short description of post"""
         return truncatechars(self.content, 100)
 
     @property
-    def passed_days(self):
+    def passed_time_since_publish(self):
         today = date.today()
-        day = str(today - self.pub_date.date() ).split(',', 1)[0]
-        p_days = day.split(' ', 1)[0] # remove days from the output, it look like this -3 days but now it only -3
+        published_day = str(today - self.pub_date.date()).split(',', 1)[0].split(' ', 1)[0]
         
         if self.pub_date.date() < date.today():
-            p_days = f"{p_days} روز گذشته"
-        elif self.pub_date.date() == date.today():
-            p_days = f"امروز"
-
-        return p_days
+            return f"{published_day} روز گذشته"
+        elif self.pub_date == date.today():
+            return "امروز"
 
     class Meta:
         verbose_name = _("پست")
