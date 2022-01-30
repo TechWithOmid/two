@@ -75,6 +75,7 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
+        """Return absolute url of post"""
         return reverse('blog:post_detail', args=[self.slug])
 
     @property
@@ -84,13 +85,24 @@ class Post(models.Model):
 
     @property
     def passed_time_since_publish(self):
+        """Calculate the passed days, weeks, months, years since article published"""
         today = date.today()
-        published_day = str(today - self.pub_date.date()).split(',', 1)[0].split(' ', 1)[0]
+        passed_days = str(today - self.pub_date.date()).split(',', 1)[0].split(' ', 1)[0]
         
-        if self.pub_date.date() < date.today():
-            return f"{published_day} روز گذشته"
-        elif self.pub_date == date.today():
+        if self.pub_date.date() == date.today():
             return "امروز"
+        elif self.pub_date.date() < date.today():
+            if int(passed_days) < 7:
+                return f"{passed_days} روز قبل"
+            if int(passed_days) < 30:
+                passed_weeks = round(int(passed_days) / 7)
+                return f"{passed_weeks} هفته قبل"
+            elif int(passed_days) < 355 and int(passed_days) > 30:
+                passed_months = round(int(passed_days) / 30)
+                return f"{passed_months} ماه قبل"
+            elif int(passed_days) > 355:
+                passed_years = round(int(passed_days) / 355)
+                return f"{passed_years} سال قبل"
 
     class Meta:
         verbose_name = _("پست")
