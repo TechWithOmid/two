@@ -1,5 +1,5 @@
 # TECH with OMID
-This is my [blog](https://techwithomid.ir) source code writen in Django.
+This was my [blog](https://techwithomid.ir) source code writen in Django.
 
 **DO NOT USE THE PROJEECT IN PRODUCTION**
 
