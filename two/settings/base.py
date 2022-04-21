@@ -7,14 +7,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # SECRET_KEY SETTINGS
 SECRET_KEY = "django-insecure-3*j%!n*4#@y7#f3533w5&o*5n7i1hp(#^qcm#$9t956#igcik&"
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 # Application definition
-
 SITE_ID = 1
 
 INSTALLED_APPS = [
+    # default apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -24,12 +23,12 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 	'django.contrib.sitemaps',
 
-    # third party
+    # third party apps
     'ckeditor',
     'django_comments_xtd',
     'django_comments',
 
-    # customize app
+    # custom apps
     'blog',
     'comments',
 ]
@@ -94,8 +93,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
-
 LANGUAGE_CODE = 'fa-ir'
 
 TIME_ZONE = 'Asia/Tehran'
@@ -106,13 +103,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
+# Static files
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "assets")]
-STATIC_ROOT = '/home/techwith/public_html/static'
+STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 
 # Media Files Settings
-MEDIA_ROOT = '/home/techwith/public_html/media'
+MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
 
 # CKEditor settings
@@ -174,8 +171,6 @@ CKEDITOR_CONFIGS = {
 
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Comment Settings
