@@ -22,7 +22,10 @@ Run the make migrations and migrate command:
 python manage.py makemigrations blog
 python manage.py migrate
 ```
-
+Also create superuser to use `amdin` panel:
+```bash
+python manage.py createsuperuser
+```
 
 #### Production
 Execute this in terminal for specify what setting file Django should use:
@@ -37,6 +40,10 @@ Run the make migrations and migrate command:
 ```bash 
 python manage.py makemigrations blog
 python manage.py migrate
+```
+Also create superuser to use `amdin` panel:
+```bash
+python manage.py createsuperuser
 ```
 In production passenger wsgi file should change.
 
